@@ -1,0 +1,5 @@
+# ignore unnecessary directories
+
+/preview
+/design
+/allParts

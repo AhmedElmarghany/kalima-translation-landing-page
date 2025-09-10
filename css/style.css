@@ -6,6 +6,10 @@
     --text-color: #5D6D7E;
 }
 ::selection{
+    background-color: var(--main-color);
+    color: white;
+}
+footer *::selection{
     background-color: var(--second-color);
     color: white;
 }
@@ -21,7 +25,7 @@ html {
     scroll-behavior: smooth;
 }
 body{
-    font-family: "Tajawal", serif;
+    /* font-family: "Tajawal", serif; */
     margin: 0;
     /* background-color: red; */
     /* background-image: url("/preview/ui2.png"); */
@@ -29,6 +33,15 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
+[lang="ar"] {
+    font-family: "Tajawal", serif;
+}
+
+[lang="en"] {
+        font-family: "Inter", serif;
+
+}
+
 /* container */
 /* .container{
     max-width: 1536px;
@@ -49,16 +62,19 @@ nav{
     background-color: white;
     box-shadow: 0px 0px 25px -19px var(--second-color);
 }
-nav a.logo{
+nav a.logo-container{
     display:contents;
     margin-bottom: 0;
     padding: 0;
 }
-nav .logo img{
+nav .logo-container img{
     height: 3.5rem;
     padding-top: .3125rem;
     padding-bottom: .3125rem;
     margin-bottom: 0;
+}
+nav .logo-container .inactive{
+    display: none;
 }
 
 .links{
@@ -91,8 +107,9 @@ nav .links li a.active{
 }
 div.language-btn-div{
     display: contents;
+    cursor: pointer;
 }
-a.language-btn{
+div.language-btn{
     font-family: "Inter", serif;
     display: flex;
     justify-content: center;
@@ -106,10 +123,20 @@ a.language-btn{
     border-radius: 0.3125rem;
     border: 1px solid var(--second-color);
 }
-a.language-btn img{
+div.language-btn.inactive{
+    display: none;
+}
+div.language-btn img{
     height: 1.25rem;
     margin: 0 0.3125rem;
 }
+[dir="ltr"] div.language-btn img{
+    width: 80%;
+}
+[lang="en"] div.language-btn{
+    font-family: "Tajawal", serif;
+}
+
 img.navbar-menu{
     display: none;
     height: 1.5rem;
@@ -150,7 +177,7 @@ img.navbar-menu{
         padding: 1.25rem 10%;
         background-color: #eee;
     }
-    a.language-btn.open{
+    div.language-btn.open{
         height: 3rem;
         padding: .3rem 1rem;
         width: 100%;
@@ -199,6 +226,12 @@ img.navbar-menu{
     margin: 10px 0;
     color: var(--main-color);
 }
+[lang="en"] .home .home-main-area .text h1{
+    font-family: "Lobster", serif;
+    font-size: 40px;
+    font-weight: 400;
+    font-style: normal;
+}
 .home .home-main-area .text h1 span{
     color: var(--second-color);
 }
@@ -209,6 +242,9 @@ img.navbar-menu{
 .home .home-main-area .text p mark{
     background-color: white;
     color: var(--text-color);
+}
+[lang="en"] .home .home-main-area .text p mark{
+    line-height: 26px;
 }
 .home .home-main-area .buttons {
     display: flex;
@@ -226,6 +262,10 @@ img.navbar-menu{
     justify-content: space-evenly;
     align-items: center;
     border-radius: 10px;
+}
+[lang="en"] .home .home-main-area .buttons a h3{
+    font-size: 18px;
+    font-weight: 500;
 }
 .home .home-main-area .buttons a.services{
     background-color: var(--cta-color);
@@ -300,6 +340,9 @@ img.navbar-menu{
     width: 100%;
     height: 100%;
     border-radius: 30px;
+}
+.about-us .image-box img.inactive{
+    display: none;
 }
 .about-us .main-box a{
     font-size: 15px;
@@ -384,6 +427,12 @@ img.navbar-menu{
 
 .our-services .main-box .know-more-services img{
     height: 60px;
+}
+[lang="en"] .our-services .main-box .know-more-services img{
+    transform: scaleX(-1);
+}
+[lang="en"] .our-services .main-box .know-more-services:hover img{
+    transform: scaleX(-1) rotate(45deg);
 }
 /* why-us */
 .why-us{
@@ -474,7 +523,9 @@ hr{
     border-radius: 5px;
     font-size: medium;
 }
-
+[lang="ar"] .contact-form input[type="tel"]{
+    direction: rtl;
+}
 .contact-form textarea {
     resize: vertical;
     min-height: 70px;
@@ -511,7 +562,10 @@ footer .main-box .info{
     flex-direction: column;
 }
 footer .main-box .info img{
-    width: 90px;
+    height: 56px;
+}
+footer .main-box .info img.inactive{
+    display: none;
 }
 footer .main-box .info p{
     text-align: center;

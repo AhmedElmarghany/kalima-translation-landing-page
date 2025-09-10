@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:image" content="https://raw.githubusercontent.com/AhmedElmarghany/Kalima/refs/heads/main/assets/template.png" />
-    <title>كلمة للترجمة المعتمدة</title>
-  <meta property="og:description" content=""كلمة" هي بوابتك إلى عالم اللغات والثقافات. نقدم خدمات ترجمة احترافية بدقة عالية" />
+    <title data-translate="page_title">كلمة للترجمة المعتمدة</title>
+    <meta property="og:description" content=""كلمة" هي بوابتك إلى عالم اللغات والثقافات. نقدم خدمات ترجمة احترافية بدقة عالية" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet"> -->
+
 </head>
 <body>
     <!-- navbar -->
     <nav>
-        <a class="logo" href="#">
-            <img src="assets/logo.svg" alt="Kalima logo">
+        <a class="logo-container" href="#">
+            <img src="assets/logo-ar.svg" alt="Kalima logo" class="logo" data-lang="ar">
+            <img src="assets/logo-en.svg" alt="Kalima logo" class="logo inactive" data-lang="en">
         </a>
         <ul class="links">
-            <li><a href="#home">الرئيسية</a></li>
-            <li><a href="#about-us">من نحن</a></li>
-            <li><a href="#our-services">خدماتنا</a></li>
-            <li><a href="#why-us">لماذا نحن</a></li>
-            <li><a href="#contact-us">تواصل معنا</a></li>
+            <li><a href="#home" data-translate="nav_home">الرئيسية</a></li>
+            <li><a href="#about-us" data-translate="nav_about_us">من نحن</a></li>
+            <li><a href="#our-services" data-translate="nav_our_services">خدماتنا</a></li>
+            <li><a href="#why-us" data-translate="nav_why_us">لماذا نحن</a></li>
+            <li><a href="#contact-us" data-translate="nav_contact_us">تواصل معنا</a></li>
         </ul>
         <div class="language-btn-div">
-            <a class="language-btn" href="#">English<img src="assets/uk-flag.svg" alt="uk-flag"></a>
+            <div class="language-btn inactive" href="#" data-lang="ar">English<img src="assets/uk-flag.svg" alt="united kingdom flag"></div>
+            <div class="language-btn " href="#" data-lang="en">العربية<img src="assets/eg-flag.svg" alt="egypt flag"></div>
         </div>
         <img src="assets/menu-bar.svg" alt="menu bar" class="navbar-menu">
     </nav>
@@ -35,18 +39,18 @@
         <div class="background"></div>
         <div class="home-main-area">
             <div class="text">
-                <h3>مرحباً بكم في <span>كلمة!</span>👋</h3>
-                <h1>دقة  في <span>الترجمة</span>،<br>وضوح في التواصل</h1>
+                <h3 data-translate="home_welcome">مرحباً بكم في <span>كلمة!</span>👋</h3>
+                <h1 data-translate="home_slogan">دقة  في <span>الترجمة</span>،<br>وضوح في التواصل</h1>
                 <p>
-                <mark>"كلمة" هي بوابتك إلى عالم اللغات والثقافات. نقدم خدمات ترجمة احترافية بدقة عالية، نضمن لك نقل المعاني بأمانة ووضوح. كلمة ليست مجرد ترجمة، بل جسر للتواصل بين الحضارات.</mark>
+                <mark data-translate="home_about">"كلمة" هي بوابتك إلى عالم اللغات والثقافات. نقدم خدمات ترجمة احترافية بدقة عالية، نضمن لك نقل المعاني بأمانة ووضوح. كلمة ليست مجرد ترجمة، بل جسر للتواصل بين الحضارات.</mark>
                 </p>
                 <div class="buttons">
                     <a href="#our-services" class="services">
-                        <h3>خدماتنا</h3>
+                        <h3 data-translate="home_services">خدماتنا</h3>
                         <img src="assets/document.svg" alt="Document Icon">        
                     </a>
                     <a href="#about-us" class="know-more">
-                        <h3>المزيد عنّا</h3>
+                        <h3 data-translate="home_know_more">المزيد عنّا</h3>
                         <img src="assets/info.svg" alt="Info Icon">
                     </a>
                 </div>
@@ -58,104 +62,106 @@
      <div class="grid-background"></div>
      <!-- about us -->
       <div id="about-us" class="about-us">
-        <h1>من نحن؟</h1>
+        <h1 data-translate="about_us_heading">من نحن؟</h1>
         <div class="main-box">
             <div class="text-box">
-                <p> <span>"كلمة"</span>هي شركة رائدة في مجال <span>الترجمة المعتمدة</span>، تقدم حلولًا لغوية عالية الجودة لمختلف المستندات القانونية، الطبية، الأكاديمية، والتجارية. بفريق من المترجمين المعتمدين ذوي الخبرة الواسعة، نضمن لكم ترجمات دقيقة ومعتمدة تلبي أعلى المعايير الدولية. مع سنوات من الخبرة واستخدام أحدث الأدوات، نلتزم بتقديم خدمات سريعة وموثوقة، لنساعدك على تجاوز الحدود اللغوية والثقافية بكل ثقة.</p>
+                <p data-translate="about_us_text"> <span>"كلمة"</span>هي شركة رائدة في مجال <span>الترجمة المعتمدة</span>، تقدم حلولًا لغوية عالية الجودة لمختلف المستندات القانونية، الطبية، الأكاديمية، والتجارية. بفريق من المترجمين المعتمدين ذوي الخبرة الواسعة، نضمن لكم ترجمات دقيقة ومعتمدة تلبي أعلى المعايير الدولية. مع سنوات من الخبرة واستخدام أحدث الأدوات، نلتزم بتقديم خدمات سريعة وموثوقة، لنساعدك على تجاوز الحدود اللغوية والثقافية بكل ثقة.</p>
                 <a href="#our-services" class="services">
-                    <h3>خدماتنا</h3>
+                    <h3 data-translate="about_us_button">خدماتنا</h3>
                     <img src="assets/document.svg" alt="Document Icon">        
                 </a>
             </div>
             <div class="image-box">
-                <img src="assets/translation.jpg" alt="translation image">
+                <img src="assets/translation-ar.jpg" alt="translation image" class="about-img " data-lang="ar">
+                <img src="assets/translation-en.jpg" alt="translation image" class="about-img inactive" data-lang="en">
             </div>
         </div>
     </div>
       <!-- our services -->
     <div id="our-services" class="our-services">
-        <h1>خدماتنا</h1>
-        <p>حلول لغوية دقيقة ومعتمدة تلبي جميع احتياجاتك</p>
+        <h1 data-translate="our_services_heading">خدماتنا</h1>
+        <p data-translate="our_services_heading_2">حلول لغوية دقيقة ومعتمدة تلبي جميع احتياجاتك</p>
         <div class="main-box">
             <div class="service">
-                <h3>الترجمة القانونية</h3>
-                <p>نقدم ترجمة دقيقة ومعتمدة للمستندات القانونية مثل العقود، الشهادات، واللوائح القانونية، مع الحفاظ على المصطلحات القانونية الدقيقة.</p>
+                <h3 data-translate="our_services_1_heading">الترجمة القانونية</h3>
+                <p data-translate="our_services_1_text">نقدم ترجمة دقيقة ومعتمدة للمستندات القانونية مثل العقود، الشهادات، واللوائح القانونية، مع الحفاظ على المصطلحات القانونية الدقيقة.</p>
             </div>
             <div class="service">
-                <h3>الترجمة الطبية</h3>
-                <p>نترجم التقارير الطبية، الأبحاث العلمية، والأدلة الدوائية بدقة عالية، مع مراعاة المصطلحات الطبية المتخصصة.</p>
+                <h3 data-translate="our_services_2_heading">الترجمة الطبية</h3>
+                <p data-translate="our_services_2_text">نترجم التقارير الطبية، الأبحاث العلمية، والأدلة الدوائية بدقة عالية، مع مراعاة المصطلحات الطبية المتخصصة.</p>
             </div>
             <div class="service">
-                <h3>الترجمة الأكاديمية</h3>
-                <p>نساعدك في ترجمة الأوراق البحثية، الرسائل العلمية، والكتب الأكاديمية مع ضمان الجودة العلمية واللغوية.</p>
+                <h3 data-translate="our_services_3_heading">الترجمة الأكاديمية</h3>
+                <p data-translate="our_services_3_text">نساعدك في ترجمة الأوراق البحثية، الرسائل العلمية، والكتب الأكاديمية مع ضمان الجودة العلمية واللغوية.</p>
             </div>
             <div class="service">
-                <h3>الترجمة الفورية</h3>
-                <p>نوفر خدمات ترجمة فورية للمؤتمرات، الاجتماعات، والمكالمات عبر الفيديو، مع ضمان دقة وسرعة في نقل الكلام.</p>
+                <h3 data-translate="our_services_4_heading">الترجمة الفورية</h3>
+                <p data-translate="our_services_4_text">نوفر خدمات ترجمة فورية للمؤتمرات، الاجتماعات، والمكالمات عبر الفيديو، مع ضمان دقة وسرعة في نقل الكلام.</p>
             </div>
             <div class="service">
-                <h3>ترجمة أوراق الهجرة</h3>
-                <p>نترجم المستندات المطلوبة لإجراءات الهجرة مثل الشهادات، السجلات الجنائية، ووثائق الهوية بدقة ومعتمدة رسميًا.</p>
+                <h3 data-translate="our_services_5_heading">ترجمة أوراق الهجرة</h3>
+                <p data-translate="our_services_5_text">نترجم المستندات المطلوبة لإجراءات الهجرة مثل الشهادات، السجلات الجنائية، ووثائق الهوية بدقة ومعتمدة رسميًا.</p>
             </div>
             <a href="#" class="service know-more-services">
-                <h3>تعرّف على المزيد من الخدمات التي نقدمها من هنا</h3>
+                <h3 data-translate="our_services_know_more">تعرّف على المزيد من الخدمات التي نقدمها من هنا</h3>
                 <img src="assets/arrow.svg" alt="arrow">
             </a>
         </div>
     </div>
     <!-- why-us -->
      <div id="why-us" class="why-us">
-        <h1>لماذا "كلمة"؟</h1>
+        <h1 data-translate="why_us_heading">لماذا "كلمة"؟</h1>
         <div class="main-box">
             <div class="reason">
                 <img src="assets/certified.svg" alt="certified icon">
-                <h3>فريق مترجمين معتمدين</h3>
-                <p>فريقنا من المترجمين المحترفين والمعتمدين يضمن لك نتائج ترجمة تلبي احتياجاتك بدقة.</p>
+                <h3 data-translate="why_us_feature_1_heading">فريق مترجمين معتمدين</h3>
+                <p data-translate="why_us_feature_1_text">فريقنا من المترجمين المحترفين والمعتمدين يضمن لك نتائج ترجمة تلبي احتياجاتك بدقة.</p>
             </div>
             <div class="reason">
                 <img src="assets/target.svg" alt="target icon">
-                <h3>دقة وجودة عالية</h3>
-                <p>نلتزم بأعلى معايير الجودة في كل مشروع، مع ضمان دقة الترجمة وسلامة المحتوى.</p>
+                <h3 data-translate="why_us_feature_2_heading">دقة وجودة عالية</h3>
+                <p data-translate="why_us_feature_2_text">نلتزم بأعلى معايير الجودة في كل مشروع، مع ضمان دقة الترجمة وسلامة المحتوى.</p>
             </div>
             <div class="reason">
                 <img src="assets/timer.svg" alt="timer icon">
-                <h3>سرعة في الإنجاز</h3>
-                <p>نقدم خدمات سريعة دون المساس بالجودة، لنساعدك في تلبية مواعيدك بكل ثقة.</p>
+                <h3 data-translate="why_us_feature_3_heading">سرعة في الإنجاز</h3>
+                <p data-translate="why_us_feature_3_text">نقدم خدمات سريعة دون المساس بالجودة، لنساعدك في تلبية مواعيدك بكل ثقة.</p>
             </div>
         </div>
     </div>
     <br>
+    <br>
     <hr>
     <!-- contact-us -->
      <div id="contact-us" class="contact-us">
-        <h1>معلومات التواصل</h1>
+        <h1 data-translate="contact_us_heading">معلومات التواصل</h1>
         <div class="main-box">
             <div class="information">
-                <p>رقم الهاتف والواتس آب</p>
+                <p data-translate="contact_us_phone">رقم الهاتف والواتس آب</p>
                 <h2>01000000000</h2>
-                <p>البريد الإلكتروني</p>
+                <p data-translate="contact_us_email">البريد الإلكتروني</p>
                 <h2>example@info.com</h2>
-                <p>مقر الشركة</p>
-                <h2>المحلة الكبرى، الغربية، مصر</h2>
-                <p>مواعيد العمل</p>
-                <h2>من 9:00 صباحاً حتى 5:00 مساءاً</h2>
+                <p data-translate="contact_us_location_heading">مقر الشركة</p>
+                <h2 data-translate="contact_us_location">المحلة الكبرى، الغربية، مصر</h2>
+                <p data-translate="contact_us_working_hours_heading">مواعيد العمل</p>
+                <h2 data-translate="contact_us_working_hours">من 9:00 صباحاً حتى 5:00 مساءاً</h2>
             </div>
             <div class="form">
                 <form action="#" method="post" class="contact-form">
-                    <h4>إذا كان لديك أي استفسارات أو طلبات مخصصصة قم بترك بياناتك وسوف يتم التواصل معك في أقرب وقت. </h4>
-                    <label for="name">اسمك أو اسم المؤسسة</label>
-                    <input type="text" id="name" name="name" placeholder="ادخل الاسم" required>
+                    <h4 data-translate="contact_us_form_heading">إذا كان لديك أي استفسارات أو طلبات مخصصة قم بترك بياناتك وسوف يتم التواصل معك في أقرب وقت. </h4>
+                    <label for="name" data-translate="contact_us_form_name">اسمك أو اسم المؤسسة</label>
+                    <input type="text" id="name" name="name" placeholder="ادخل الاسم" required data-translate-placeholder="placeholder_name">
                     
-                    <label for="email">البريد الإلكتروني</label>
+                    <label for="email" data-translate="contact_us_form_email">البريد الإلكتروني</label>
                     <input type="email" id="email" name="email" placeholder="mail@example.com" required>
                     
-                    <label for="phone">رقم الهاتف</label>
-                    <input type="tel" id="phone" name="phone" placeholder="ادخل رقم الهاتف">
+                    <label for="phone" data-translate="contact_us_form_phone">رقم الهاتف</label>
+                    <input type="tel" id="phone" name="phone" placeholder="ادخل رقم الهاتف" data-translate-placeholder="placeholder_phone">
                     
-                    <label for="message">رسالتك</label>
-                    <textarea id="message" name="message" placeholder="ادخل رسالتك..." required></textarea>
+                    <label for="message" data-translate="contact_us_form_message">رسالتك</label>
+                    <textarea id="message" name="message" placeholder="ادخل رسالتك..." required data-translate-placeholder="placeholder_message"></textarea>
                     
-                    <button type="submit">إرسال</button>
+                    <button type="submit" data-translate="contact_us_form_send">إرسال</button>
                 </form>          
             </div>
         </div>
@@ -164,13 +170,14 @@
       <footer>
         <div class="main-box">
             <div class="info">
-                <img src="assets/white-logo.svg" alt="Logo">
-                <p>"كلمة"هي شركة رائدة في مجال الترجمة المعتمدة، تقدم حلولًا لغوية عالية الجودة لمختلف المستندات القانونية، الطبية، الأكاديمية، والتجارية. بفريق من المترجمين المعتمدين ذوي الخبرة الواسعة.
+                <img src="assets/white-logo-ar.svg" alt="Logo" class="white-logo " data-lang="ar">
+                <img src="assets/white-logo-en.svg" alt="Logo" class="white-logo inactive" data-lang="en">
+                <p data-translate="footer_about">"كلمة"هي شركة رائدة في مجال الترجمة المعتمدة، تقدم حلولًا لغوية عالية الجودة لمختلف المستندات القانونية، الطبية، الأكاديمية، والتجارية. بفريق من المترجمين المعتمدين ذوي الخبرة الواسعة.
                 </p>
             </div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6912.406848464375!2d31.127168193511775!3d29.97358329983696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584587ac8f291b%3A0x810c2f3fa2a52424!2sThe%20Great%20Pyramid%20of%20Giza!5e0!3m2!1sen!2seg!4v1737541903493!5m2!1sen!2seg" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Our location on map"></iframe>
             <div class="social-media">
-                <h3>تابعنا على</h3>
+                <h3 data-translate="footer_follow_us">تابعنا على</h3>
                 <div class="links">
                     <a href="http://www.facebook.com" target="_blank"><img src="assets/facebook.svg" alt="facebook"></a>
                     <a href="http://www.youtube.com" target="_blank"><img src="assets/youtube.svg" alt="youtube"></a>
@@ -179,7 +186,7 @@
             </div>
         </div>
         <hr>
-        <p>جميع الحقوق محفوظة لشركة كلمة 2025©</p>
+        <p data-translate="footer_copy_rights">جميع الحقوق محفوظة لشركة كلمة 2025©</p>
       </footer>
       <script src="js/script.js"></script>
 </body>

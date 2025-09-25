@@ -285,7 +285,7 @@ const form = document.getElementById("contact_form");
 const submitButton = document.getElementById("form_button");
 const formMessageSuccess = document.querySelector(".alert-message-success");
 const formMessageFailed = document.querySelector(".alert-message-failed");
-const successTone = new Audio("/assets/successed.mp3");
+const successTone = new Audio("./assets/successed.mp3");
 
 // initializing the Emailjs library
 

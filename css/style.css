@@ -407,6 +407,10 @@ img.navbar-menu{
     }
     .home .home-main-area .buttons{
         justify-content: center;
+        gap: 20px;
+    }
+    .home .home-main-area .buttons a.know-more{
+        margin: 0;
     }
 }
 /* background */

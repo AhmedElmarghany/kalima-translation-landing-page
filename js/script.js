@@ -96,9 +96,11 @@ const translations = {
     contact_us_form_message: "رسالتك",
     placeholder_message: "ادخل رسالتك...",
     contact_us_form_send: "إرسال",
+    contact_us_form_success_message: "✅تم إرسال الرسالة بنجاح",
+    contact_us_form_fail_message: "⛔فشل إرسال الرسالة",
     footer_about: '"كلمة"هي شركة رائدة في مجال الترجمة المعتمدة، تقدم حلولًا لغوية عالية الجودة لمختلف المستندات القانونية، الطبية، الأكاديمية، والتجارية. بفريق من المترجمين المعتمدين ذوي الخبرة الواسعة.',
     footer_follow_us: "تابعنا على",
-    footer_copy_rights: "جميع الحقوق محفوظة لشركة كلمة 2025©"
+    footer_copy_rights: "جميع الحقوق محفوظة لشركة كلمة ٢٠٢٥ ©"
   },
   en: {
     page_title: "Kalima Translation Agency",
@@ -151,10 +153,11 @@ const translations = {
     contact_us_form_message: "Your message",
     placeholder_message: "Enter your message...",
     contact_us_form_send: "Send",
+    contact_us_form_success_message: "✅Message sent successfully",
+    contact_us_form_fail_message: "⛔Failed to send message",
     footer_about: 'Kalima is a leading certified translation company, providing high-quality language solutions for various legal, medical, academic, and commercial documents. It employs a team of highly experienced certified translators.',
     footer_follow_us: "Follow us",
-    footer_copy_rights: "All rights reserved to Kalima Agency 2025©"
-    
+    footer_copy_rights: "All rights reserved to Kalima Agency 2025 ©"
   }
 };
 
@@ -174,6 +177,12 @@ function toggleLanguage(){
   localStorage.setItem("preffered-language", currentLanguage)
 }
 
+
+// Favicon switching function
+function switchFavicon(){
+  const favicon = document.querySelector("link[rel~='icon']");
+  favicon.href = (currentLanguage === "ar"? "assets/ar-favicon.svg" : "assets/en-favicon.svg")
+}
 
 // Logo switching function
 function switchLogo(){
@@ -234,6 +243,7 @@ function setLanguage(lang){
   switchLanguageButton()
   switchImage()
   switchWhiteLogo()
+  switchFavicon()
   updateURL(lang)
 
   const htmlRoot = document.querySelector('.html-root');

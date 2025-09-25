@@ -6,6 +6,7 @@
     <meta property="og:image" content="https://raw.githubusercontent.com/AhmedElmarghany/Kalima/refs/heads/main/assets/template.png" />
     <title data-translate="page_title">كلمة للترجمة المعتمدة</title>
     <meta property="og:description" content=""كلمة" هي بوابتك إلى عالم اللغات والثقافات. نقدم خدمات ترجمة احترافية بدقة عالية" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -147,21 +148,23 @@
                 <h2 data-translate="contact_us_working_hours">من 9:00 صباحاً حتى 5:00 مساءاً</h2>
             </div>
             <div class="form">
-                <form action="#" method="post" class="contact-form">
+                <form id="contact_form">
                     <h4 data-translate="contact_us_form_heading">إذا كان لديك أي استفسارات أو طلبات مخصصة قم بترك بياناتك وسوف يتم التواصل معك في أقرب وقت. </h4>
                     <label for="name" data-translate="contact_us_form_name">اسمك أو اسم المؤسسة</label>
-                    <input type="text" id="name" name="name" placeholder="ادخل الاسم" required data-translate-placeholder="placeholder_name">
+                    <input type="text" id="name" name="from_name" placeholder="ادخل الاسم" required minlength="3" data-translate-placeholder="placeholder_name">
                     
                     <label for="email" data-translate="contact_us_form_email">البريد الإلكتروني</label>
-                    <input type="email" id="email" name="email" placeholder="mail@example.com" required>
+                    <input type="email" id="email" name="from_email" placeholder="mail@adress.com" required>
                     
                     <label for="phone" data-translate="contact_us_form_phone">رقم الهاتف</label>
-                    <input type="tel" id="phone" name="phone" placeholder="ادخل رقم الهاتف" data-translate-placeholder="placeholder_phone">
+                    <input type="tel" id="phone" name="phone_number" placeholder="ادخل رقم الهاتف" data-translate-placeholder="placeholder_phone">
                     
                     <label for="message" data-translate="contact_us_form_message">رسالتك</label>
-                    <textarea id="message" name="message" placeholder="ادخل رسالتك..." required data-translate-placeholder="placeholder_message"></textarea>
+                    <textarea id="message" name="message" placeholder="ادخل رسالتك..." minlength="10" required data-translate-placeholder="placeholder_message"></textarea>
                     
-                    <button type="submit" data-translate="contact_us_form_send">إرسال</button>
+                    <button id="form_button" type="submit" data-translate="contact_us_form_send">إرسال</button>
+                    <p class="alert-message-success" hidden>✅Message sent successfully</p>
+                    <p class="alert-message-failed" hidden>⛔Failed to send message</p>
                 </form>          
             </div>
         </div>

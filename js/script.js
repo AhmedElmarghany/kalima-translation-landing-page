@@ -29,16 +29,16 @@ let languageBtn = document.querySelector("div.language-btn-div")
 function navbarToggler(){
 
     links.classList.toggle('open');
-    languageBtn.classList.toggle("open");
-    languageBtn.children[0].classList.toggle("open");
+    // languageBtn.classList.toggle("open");
+    // languageBtn.children[0].classList.toggle("open");
 };
 navbarBtn.addEventListener("click", navbarToggler);
 document.querySelector("body").addEventListener("click", function(e){
     if(!e.target.classList.contains("navbar-menu") && !e.target.classList.contains("links") && !e.target.classList.contains("language-btn-div")) {
         if (links.classList.value == "links open"){
             links.classList.remove('open');
-            languageBtn.classList.remove("open");
-            languageBtn.children[0].classList.remove("open");
+            // languageBtn.classList.remove("open");
+            // languageBtn.children[0].classList.remove("open");
         }}
 })
 
@@ -277,3 +277,41 @@ function updateURL(lang){
 }
 // Language switcher Event Listener
 languageBtn.addEventListener("click", toggleLanguage);
+
+
+// Contact form
+
+const form = document.getElementById("contact_form");
+const submitButton = document.getElementById("form_button");
+const formMessageSuccess = document.querySelector(".alert-message-success");
+const formMessageFailed = document.querySelector(".alert-message-failed");
+const successTone = new Audio("/assets/successed.mp3");
+
+// initializing the Emailjs library
+
+(function() {
+    emailjs.init({
+      publicKey: "5pYQt3u5z5lhEMQwp",
+    });
+})();
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  emailjs.sendForm("service_thi3z9s", "contact_form", form).then(
+    () => {
+      formMessageSuccess.style.display = "block";
+      successTone.play();
+      setTimeout(() => {
+        formMessageSuccess.style.display = "none";
+      }, 3000);
+    },
+    (error) => {
+      console.log("FAILED...", error);
+      formMessageFailed.style.display = "block";
+      setTimeout(() => {
+        formMessageFailed.style.display = "none";
+      }, 3000);
+    }
+  );
+});

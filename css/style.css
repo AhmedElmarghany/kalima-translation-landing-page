@@ -62,7 +62,8 @@ footer *::selection{
 }
 /* scroll bar */
 ::-webkit-scrollbar {
-    width: 10px;
+    background-color: #eee;
+    width: 12px;
 }
 ::-webkit-scrollbar-thumb {
     background: var(--main-color);
@@ -601,7 +602,6 @@ img.navbar-menu{
     align-items: center;
     flex-wrap: wrap;
     gap: 1em;
-
 }
 .our-services .main-box .service{
     max-width: 28%;
@@ -681,8 +681,8 @@ img.navbar-menu{
 }
 /* why-us */
 .why-us{
-    scroll-margin-top: 90px;
-    margin: 0 160px;
+    scroll-margin-top: 80px;
+    margin: 0 10%;
 }
 .why-us h1{
     text-align: center;
@@ -691,35 +691,68 @@ img.navbar-menu{
 .why-us .main-box{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 .why-us .main-box .reason{
-    width: 28%;
-    height: 160px;
+    max-width: 28%;
+    height: auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* Edit this */
-    overflow: hidden;
 }
 .why-us .main-box .reason img{
-    height: 65px;
+    height: 60px;
 }
 .why-us .main-box .reason h3{
     color: var(--main-color);
+    text-align: center;
 }
 .why-us .main-box .reason p{
     text-align: center;
     margin-top: 0;
-    font-size: large;
+    font-size: var(--font-size-body);
     color: var(--text-color);
 }
 /* hr */
 hr{
     width: 50%;
+}
+@media(max-width: 992px){
+    .why-us{
+        scroll-margin-top: 70px;
+    }
+    .why-us .main-box .reason img{
+        height: 55px;
+    }
+    .why-us .main-box .reason{
+        min-width: 40%;
+    }
+    .why-us .main-box {
+        justify-content: center;
+    }
+}
+@media(max-width: 768px){
+    .why-us .main-box .reason img{
+        height: 50px;
+    }
+    .why-us{
+        margin: 0 5%;
+    }
+    hr{
+        width: 90%;
+    }
+}
+@media(max-width: 480px){
+    .why-us .main-box .reason{
+        min-width: 80%;
+        padding: 10px;
+    }
+    .why-us .main-box .reason img{
+        height: 45px;
+    }
 }
 /* contact-us */
 .contact-us{

@@ -757,7 +757,7 @@ hr{
 /* contact-us */
 .contact-us{
     scroll-margin-top: 85px;
-    margin: 0 160px;
+    margin: 0 10%;
 }
 .contact-us h1{
     text-align: center;
@@ -770,25 +770,25 @@ hr{
     flex-wrap: wrap;
 }
 .contact-us .main-box .information p{
-    font-size: large;
+    font-size: var(--font-size-body);
     color: var(--text-color);
 }
 .contact-us .main-box .information h2{
     color: var(--main-color);
 }
-/* test */
 .contact-us .main-box .form h4{
     color: var(--main-color);
+    text-align: center;
 }
 
 #contact_form {
-    max-width: 400px;
+    max-width: 390px;
     background: #fff;
     padding: 20px;
     border-radius: var(--border-radius);
     border: 1px var(--second-color) solid;
     box-shadow: 0px 0px 20px -5px var(--second-color);
-  }
+}
 
 #contact_form label {
     color: var(--main-color);
@@ -797,7 +797,7 @@ hr{
 #contact_form input,
 #contact_form textarea,
 #contact_form button {
-    width: 90%;
+    width: calc(100% - 22px);
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid var(--second-color);
@@ -819,7 +819,7 @@ hr{
 
 #contact_form button {
     font-family: "Tajawal", serif;
-    width: 95%;
+    width: 100%;
     background-color: var(--main-color);
     color: white;
     border: none;
@@ -839,6 +839,31 @@ hr{
     text-align: center;
     color: red;
     margin: 0 auto;
+}
+@media(max-width: 992px){
+    .contact-us{
+            margin: 0 5%;
+    }
+    .contact-us .main-box .information h2{
+        font-size: 20px;
+    }
+    #contact_form {
+        width: 320px;
+    }    
+}
+@media(max-width: 768px){
+    .contact-us .main-box{
+        flex-direction: column;
+    }
+    .contact-us h1{
+        margin-bottom: 0;
+    }
+    .contact-us .main-box .information{
+        text-align: center;
+    }
+    #contact_form {
+        width: auto;
+    }
 }
 /* footer */
 footer{

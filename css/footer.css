@@ -1,0 +1,134 @@
+/* footer */
+footer *::selection{
+    background-color: var(--second-color);
+    color: white;
+}
+footer{
+    margin-top: 20px;
+    background-color: #2E4053;
+    padding: 30px 10% 10px;
+}
+footer .main-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .main-box .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+}
+footer .main-box .info img{
+    height: 56px;
+}
+footer .main-box .info img.inactive{
+    display: none;
+}
+footer .main-box .info p{
+    text-align: center;
+    width: 80%;
+    color: white;
+}
+footer .main-box iframe{
+    border: 0px;
+    border-radius: var(--border-radius);
+    height: 250px;
+    width: 40%;
+}
+footer .main-box .social-media{
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+}
+footer .main-box .social-media .links{
+    margin-top: 30px;
+}
+footer .main-box .social-media .links a{
+    padding: 30px;
+}
+footer .main-box .social-media .links a img{
+    height: 35px;
+}
+footer > p{
+    color: white;
+    text-align: center;
+}
+footer hr{
+    margin-top: 20px;
+    border: 1px solid white;
+}
+@media(max-width: 1200px){
+    footer{
+        padding: 30px 10px;
+    }
+    footer .main-box .info p{
+        width: 100%;
+    }
+}
+@media(max-width: 992px){
+    footer .main-box .social-media {
+        width: 15%;
+    }
+    footer .main-box .social-media .links{
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    footer .main-box .social-media .links a {
+        padding: 10px;
+    }
+    footer .main-box iframe{
+        width: 50%;
+    }
+    footer .main-box .info{
+        width: 30%;
+    }
+    footer{
+        padding-bottom: 10px;
+    }
+}
+@media(max-width: 768px){
+    footer .main-box{
+        flex-direction: column;
+    }
+    footer .main-box .info{
+        width: 80%;
+    }
+    footer .main-box iframe{
+        display: block;
+        width: 80%;
+    }
+    footer .main-box .social-media h3{
+        display: none;
+    }
+    footer .main-box .social-media{
+        width: 80%;
+    }
+    footer .main-box .social-media .links{
+        flex-direction: row;
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    footer hr{
+        display: none;
+    }   
+}
+@media(max-width: 480px){
+    footer .main-box .info{
+        width: 100%;
+    }
+    footer .main-box iframe{
+        width: 100%;
+    }
+    footer .main-box .social-media{
+        width: 100%;
+    }
+    footer > p{
+        margin-bottom: 0;
+    }
+    
+}

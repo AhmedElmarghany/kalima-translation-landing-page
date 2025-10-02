@@ -1,0 +1,169 @@
+/* navbar */
+nav{
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 0px 25px -19px var(--second-color);
+    transition: all .5s ease;
+    z-index: 1000;
+}
+nav a.logo-container{
+    display:contents;
+    margin-bottom: 0;
+    padding: 0;
+}
+nav .logo-container img{
+    height: 3rem;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-bottom: 0;
+}
+nav .logo-container .inactive{
+    display: none;
+}
+
+.links{
+    list-style: none;
+    display: flex;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
+}
+.links li{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+.links li a{
+    color: var(--main-color);
+    transition: color .3s ease;
+    font-size: 1rem;
+    font-weight: 700;
+    padding-bottom: .25rem;
+    text-decoration: none;
+}
+nav .links li a:hover{
+    color: var(--second-color);
+    border-style: solid;
+    border-color: var(--second-color);
+    border-width: 0 0 3px 0;
+    background-image: linear-gradient(0deg, var(--second-color-opacity), transparent, transparent);
+}
+nav .links li a.active{
+    color: var(--second-color);
+}
+div.language-btn-div{
+    display: contents;
+    cursor: pointer;
+}
+div.language-btn{
+    font-family: "Inter", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .9rem 1rem;
+    background-color: var(--second-color-opacity);
+    color: var(--second-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--second-color);
+}
+div.language-btn.inactive{
+    display: none;
+}
+div.language-btn img{
+    height: 1.25rem;
+    margin: 0 0.3125rem;
+}
+[dir="ltr"] div.language-btn img{
+    width: 80%;
+}
+[lang="en"] div.language-btn{
+    font-family: "Tajawal", serif;
+}
+
+img.navbar-menu{
+    display: none;
+    height: 1.5rem;
+    cursor: pointer;
+}
+@media(max-width:992px){
+    nav{
+        padding: 0 15px;
+    }
+
+    .links li{
+        padding: .5rem;
+    }
+        div.language-btn img{
+        display: none;
+    }
+    nav .logo-container img{
+        height: 2.5rem;
+    }
+    div.language-btn{
+        padding: .7rem .6rem;
+        font-size: 1rem;
+    }
+
+
+
+}
+
+@media (max-width: 768px){
+    
+    nav{
+        display: flex;
+    }
+    
+    /* logo */
+    nav > a img {
+        order: 2;
+    }
+    /* language */
+    nav > div div {
+        order: 3;
+    }
+    /* menu */
+    nav > img {
+        order: 1;
+    }
+    
+    /* logo */
+    [lang="en"] nav > a img {
+        margin-left: 40px;
+    }
+    
+    .links{
+        display: none;
+    }
+    img.navbar-menu{
+        display: block;
+    }
+    nav{
+        padding: 0 15px;
+    }
+    .links.open{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        align-items: center;
+        background-color: #eee;
+        z-index: 999;
+    }
+    .links.open li{
+        padding: 1.25rem;
+    }
+}

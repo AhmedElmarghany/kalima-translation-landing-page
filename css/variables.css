@@ -1,0 +1,53 @@
+:root {
+    /* Color Variables */
+    --main-color: #2E4053;
+    --second-color: #3498DB;
+    --second-color-opacity: rgba(52, 152, 219, .2);
+    --cta-color: #E67E22;
+    --text-color: #5D6D7E;
+    /* Font Size Variables */
+    --font-size-slogan-ar: 3.5rem;
+    --font-size-slogan-en: 2.75rem;
+    --font-size-welcome: 1.375rem;
+    --font-size-body: 1.125rem;
+    --font-size-button-ar: 1rem;
+    --font-size-button-en: 1.1rem;
+
+    --border-radius: 0.3125rem;
+
+}
+
+/* Tablet breakpoint variables */
+@media (max-width: 992px) {
+    :root {
+        /* Reduce font sizes proportionally for tablets */
+        --font-size-slogan-ar: 3rem;
+        --font-size-slogan-en: 2.5rem;
+        --font-size-welcome: 1.25rem;
+        --font-size-body: 1.0625rem;
+    }
+}
+
+/* Mobile breakpoint variables */
+@media (max-width: 768px) {
+    :root {
+        /* Reduce font sizes proportionally for mobiles */
+        --font-size-slogan-ar: 2.5rem;
+        --font-size-slogan-en: 2.25rem;
+        --font-size-welcome: 1.1875rem;
+        --font-size-body: 1rem;
+        --font-size-button-ar: 0.95rem;
+        --font-size-button-en: 1rem;
+    }
+}
+
+/* Small mobile breakpoint variables */
+@media (max-width: 480px) {
+    :root {
+        /* Reduce font sizes proportionally for small mobiles */
+        --font-size-slogan-ar: 2.25rem;
+        --font-size-slogan-en: 2rem;
+        --font-size-welcome: 1.125rem;
+        --font-size-body: 0.9375rem;
+    }
+}

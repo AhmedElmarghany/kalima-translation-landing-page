@@ -1,0 +1,112 @@
+/* contact-us */
+.contact-us{
+    scroll-margin-top: 85px;
+    margin: 0 10%;
+}
+.contact-us h1{
+    text-align: center;
+    color: var(--main-color);
+}
+.contact-us .main-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contact-us .main-box .information p{
+    font-size: var(--font-size-body);
+    color: var(--text-color);
+}
+.contact-us .main-box .information h2{
+    color: var(--main-color);
+}
+.contact-us .main-box .form h4{
+    margin-top: 0;
+    color: var(--main-color);
+    text-align: center;
+}
+
+#contact_form {
+    max-width: 390px;
+    background: #fff;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    border: 1px var(--second-color) solid;
+    box-shadow: 0px 0px 20px -5px var(--second-color);
+}
+
+#contact_form label {
+    color: var(--main-color);
+    font-weight: 500;
+}
+#contact_form input,
+#contact_form textarea,
+#contact_form button {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--second-color);
+    border-radius: var(--border-radius);
+    font-size: medium;
+}
+
+#contact_form input:invalid{
+    outline-color: red;
+}
+[lang="ar"] #contact_form input[type="tel"]{
+    direction: rtl;
+}
+#contact_form textarea {
+    resize: vertical;
+    min-height: 70px;
+    font-size: larger;
+}
+
+#contact_form button {
+    font-family: "Tajawal", serif;
+    width: 100%;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact_form button:hover {
+    background-color: var(--cta-color);
+}
+#contact_form .alert-message-success {
+    text-align: center;
+    color: green;
+    margin: 0 auto;
+}
+#contact_form .alert-message-failed {
+    text-align: center;
+    color: red;
+    margin: 0 auto;
+}
+@media(max-width: 992px){
+    .contact-us{
+            margin: 0 5%;
+    }
+    .contact-us .main-box .information h2{
+        font-size: 20px;
+    }
+    #contact_form {
+        width: 320px;
+    }    
+}
+@media(max-width: 768px){
+    .contact-us .main-box{
+        flex-direction: column;
+    }
+    .contact-us h1{
+        margin-bottom: 0;
+    }
+    .contact-us .main-box .information{
+        text-align: center;
+    }
+    #contact_form {
+        width: auto;
+    }
+}

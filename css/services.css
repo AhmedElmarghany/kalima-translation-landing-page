@@ -1,0 +1,101 @@
+/* our-services */
+.our-services .main-box .service *::selection{
+    background-color: var(--second-color);
+    color: white;
+}
+.our-services{
+    scroll-margin-top: 85px;
+    margin: 0 10%;
+}
+.our-services > h1{
+    text-align: center;
+    color: var(--main-color);
+}
+.our-services > p{
+    text-align: center;
+    font-size: var(--font-size-body);
+    color: var(--text-color);
+}
+.our-services .main-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.our-services .main-box .service{
+    max-width: 28%;
+    height: 180px;
+    padding: 0 20px;
+    background-color: var(--second-color-opacity);
+    border: 1px solid var(--second-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.our-services .main-box .service h3{
+    color: var(--second-color);
+    margin-bottom: 0;
+}
+.our-services .main-box .service p{
+    font-size: var(--font-size-body);
+    color: var(--text-color);
+    margin-top: 12px;
+}
+.our-services .main-box .service:hover,
+.our-services .main-box .service:hover h3,
+.our-services .main-box .service:hover p{
+    color: white;
+    background-color: var(--main-color);
+    border: 0px;
+}
+.our-services .main-box .know-more-services{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    border: 0;
+    background-color: var(--second-color);
+}
+.our-services .main-box .know-more-services img{
+    transition: transform 0.5s ease; 
+}
+.our-services .main-box .know-more-services:hover img{
+    transform: rotate(45deg);
+}
+
+.our-services .main-box .know-more-services h3{
+    color: white;
+    width: 50%;
+    margin-top: 0;
+}
+
+.our-services .main-box .know-more-services img{
+    height: 60px;
+}
+[lang="en"] .our-services .main-box .know-more-services img{
+    transform: scaleX(-1);
+}
+[lang="en"] .our-services .main-box .know-more-services:hover img{
+    transform: scaleX(-1) rotate(45deg);
+}
+@media (max-width: 1200px){
+    .our-services .main-box .service{
+        max-width: 43%;
+        height: 200px;
+    }
+}
+@media (max-width: 992px){
+    .our-services .main-box .service{
+        max-width: 100%;
+        height: auto;
+    }
+    .our-services .main-box .know-more-services{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .our-services{
+        margin: 0 5%;
+    }
+}

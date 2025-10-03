@@ -1,6 +1,6 @@
 # Kalima Translation Agency - Landing Page
 
-** Professional bilingual landing page for a translation agency **
+**Professional bilingual landing page for a translation agency**
 
 [🔗 Live Demo](https://ahmedelmarghany.github.io/kalima-translation-landing-page)
 
